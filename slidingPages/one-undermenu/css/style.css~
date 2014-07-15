@@ -1,0 +1,34 @@
+
+#menusel {
+//  display: none;
+}
+
+.menu {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  z-index: 10;
+  width: 450px;
+  height: 728px;
+  border: 1px solid black;
+  padding: 10px;
+  background: #ccc;
+}
+
+.mainpage {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  z-index: 20;
+  width: 450px;
+  height: 728px;
+  border: 1px solid black;
+  padding: 10px;
+  background: #ddf;
+}
+
+#button {
+  display: block;
+  border: 1px solid black;
+  
+}

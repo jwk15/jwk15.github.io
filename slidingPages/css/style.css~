@@ -1,0 +1,77 @@
+
+* {
+  box-sizing: border-box;
+}
+
+input[type="radio"] {
+  display: none;
+  position: absolute;
+}
+
+/* ---------- pages ---------- */
+.bigwrap {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 450px;
+  height: 728px;
+//  border: 1px dashed red;
+  overflow: hidden;
+  padding: 0;
+}
+
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+//  width: 450px;
+//  height: 728px;
+  padding: 10px;
+}
+
+.mainpage {
+  border: 3px solid #88a;
+  background: #ddf;
+  -webkit-transition: margin-left 0.5s ease-out;
+}
+
+.menu1 {
+  z-index: 0;
+  margin-left: 100%;
+  border: 3px solid #888;
+  background: #ccc;
+  -webkit-transition: margin-left 0.5s ease-out;
+}
+
+/* ---------- control buttons ---------- */
+.button {
+  display: inline-block;
+  margin: 3px;
+  padding: 3px;
+  border: 1px solid black;
+  background: rgba(200,200,200, 0.3);
+}
+
+.b1 {
+}
+
+.bm {
+//  display: none;
+}
+
+/* ---------- controls ---------- */
+
+#mainsel:checked ~ .menu1 {
+//  -webkit-transition: z-index 0.5s steps(1, end);
+//  z-index: 0;
+}
+
+#menu1sel:checked ~ .mainpage {
+  margin-left: -100%;
+  -webkit-transition: margin-left 0.5s ease-out;
+}
+
+#menu1sel:checked ~ .menu1 {
+  margin-left: 0;
+  -webkit-transition: margin-left 0.5s ease-out;
+}

@@ -1,0 +1,94 @@
+
+#menusel {
+//  display: none;
+}
+
+/* ---------- pages ---------- */
+.page {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 450px;
+  height: 728px;
+  padding: 10px;
+}
+
+.menu1 {
+  z-index: 0;
+  border: 1px solid #888;
+  background: #ccc;
+}
+
+.menu2 {
+  z-index: 0;
+  border: 1px solid #a88;
+  background: #fdd;
+}
+
+.mainpage {
+  z-index: 200;
+  border: 1px solid #88a;
+  background: #ddf;
+  -webkit-transition: margin-left 0.5s ease-out;
+}
+
+/* ---------- control buttons ---------- */
+.button {
+  display: inline-block;
+  margin: 3px;
+  padding: 3px;
+  border: 1px solid black;
+  background: rgba(200,200,200, 0.3);
+}
+
+#b1 {
+//  position:absolute;
+//  top: 0;
+//  left: 0;
+}
+
+#b2 {
+
+}
+
+#bm {
+  display: none;
+}
+
+/* ---------- controls ---------- */
+
+#mainsel:checked ~ .menu1 {
+  -webkit-transition: z-index 0.5s steps(1, end);
+  z-index: 0;
+}
+
+/* for RH slide, just make margin-left negative */
+#menu1sel:checked ~ .mainpage,
+#menu2sel:checked ~ .mainpage {
+  margin-left: 360px;
+  -webkit-transition: margin-left 0.5s ease-out;
+}
+
+#menu1sel:checked ~ .menu1,
+#menu2sel:checked ~ .menu2 {
+  z-index: 100;
+  //-webkit-transition: z-index 0.5s steps(1, end);
+}
+
+#menu2sel:checked ~ .menu1,
+#menu1sel:checked ~ .menu2 {
+  //-webkit-transition: z-index 0.5s steps(1, end);
+  z-index: 0;
+}
+
+#menu1sel:checked ~ .mainpage #bm,
+#menu2sel:checked ~ .mainpage #bm {
+  display: inline-block;
+}
+
+#menu1sel:checked ~ .mainpage #b1,
+#menu1sel:checked ~ .mainpage #b2,
+#menu2sel:checked ~ .mainpage #b1,
+#menu2sel:checked ~ .mainpage #b2 {
+  display: none;
+}
